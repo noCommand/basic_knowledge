@@ -5,11 +5,14 @@
     <title>초보 안드로이드 개발자 Ryan의 독서실</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-    body {
-      font-family: 'Nanum Gothic', sans-serif;
-    }
-    li {
-           margin: 6px 0px;
+      body {
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+      li {
+             margin: 6px 0px;
+         }
+       a {
+         color: black;
        }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -23,13 +26,14 @@
 </script>
   </head>
   <body >
-    <div style="width:80%; height:100px; padding: 10px; margin: 0 auto; text-align: center; background-color:#CF0">
+    <div style="width:80%; height:150px; padding: 10px; margin: 0 auto; text-align: center; background-color:#CF0; border:1px solid gray;">
+      <h1 style="font-size=45px; text-align=center ">초보 안드로이드 개발자 Ryan의 독서실</h1>
       <p>"제가 생각하는 안드로이드 개발자의 기본 지식 및 키워드들에 대해 리스트업 해놓았습니다. <br>훑어보시고 조금이나마 도움이 되셨으면 좋겠습니다."</p>
     </div>
     <div style="width:80%; height:100%; margin: 0 auto;">
       <ol>
         <li>
-          <a href="#">객체제향 5대 원칙</a>
+          <a href="#" class="saw">객체제향 5대 원칙</a>
         </li>
         <ul>
           <li>SRP</li>
@@ -51,7 +55,7 @@
         <li>저수준 모듈</li>
         <li>의존성 주입</li>
         <li>
-          <a href="detail/dependency_injection_example.html">의존성 해결 예시</a>
+          <a href="detail/dependency_injection_example.html" class="saw">의존성 해결 예시</a>
         </li>
         <li>오버로딩</li>
         <li>의존관계</li>
@@ -138,11 +142,11 @@
         <li>병렬성</li>
         <li>Thread Safe</li>
         <li>
-          <a href="detail/reflection">Reflection</a>
+          <a href="detail/reflection" class="saw">Reflection</a>
           <p>Hint : <span style="color:white;">런타임 동적 클래스 기법</span></p>
         </li>
         <li>
-          <a href="detail/serialize">직렬화</a>
+          <a href="detail/serialize" class="saw">직렬화</a>
 
         </li>
         <h2>구글링해서 나온 기술 면접 대비 질문 모음</h2>
@@ -176,8 +180,35 @@
         <li>Linux</li>
         <li>Host</li>
         <li>Hosting(Cloud)</li>
-        <li><a href="시간복잡도.html">시간복잡도</a></li>
-        <li></li>
+        <li>Intent란?</li>
+        <p>메시지 객체로 이 객체를 통해 다른 컴포넌트간의 정보를 주고받을 수 있다.</p>
+        <li>Intent Type은?</li>
+        <ul>
+          <li>명시적</li>
+          <p>클래스 객체나 컴포넌트 이름을 지정하여 호출할 대상을 확실히 알 수 있는 경우에 사용한다.</p>
+          <li>암시적</li>
+          <p>호출할 대상이 달라질 수 있는 경우에 사용한다.</p>
+        </ul>
+      <li>IntentFilter</li>
+      <p>암시적 인텐트를 통해 사용자로 하여금 어느 앱을 사용할지 선택하도록 할 때 필요하다.</p>
+      <li>PendingIntent</li>
+      <p>다른 애플리케이션의 권한을 허가하여 가지고 있는 Intent를 마치 본인의 앱의 프로세스처럼 실행시키는 것(Notification)</p>
+      <li>Activity Lifecycle</li>
+      <p>onCreate -> onStart -> onResume -> onPause -> onStop -> onDestroy</p>
+      <li>Fragment Lifecycle</li>
+      <p>onAttach -> onCreate -> onCreateView -> onViewCreated -> onStart -> onResume -> onPause -> onStop -> onDestroyView -> onDestroy -> onDetach</p>
+      <li>FragmentManager</li>
+      <p>프래그먼트를 추가 삭제하고 백스텍이 넣는 등의 작업을 하는 클래스</p>
+      <li><a href="시간복잡도.html" class="saw">FragmentTransaction</a></li>
+      <p>프래그먼트를 수행하고자하는 변경사항의 집합(add remove replace)</p>
+      <li><a href="시간복잡도.html" class="saw">ANR</a></li>
+      <p>안드로이드 앱의 UI 스레드가 오랫동안 차단된 경우 발생</p>
+      <li><a href="시간복잡도.html" class="saw">Annotation</a></li>
+      <p>주석,특정 클래스 변수 메소드 등에 붙이는 코드로 타겟의 기능을 좀 더 명확하게 해주는 역활</p>
+      <li><a href="detail/content.html" class="saw">Context</a></li>
+      <p>안드로이드 시스템이 어플리케이션이나 컴포넌트 등을 관리하기 위한 것 </p>
+      <p>애플리케이션 환경과 리소스에 대한 엑세스를 제공하는 클레스</p>
+
       </ol>
       <div id="disqus_thread"></div>
 <script>
